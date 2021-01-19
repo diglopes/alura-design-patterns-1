@@ -19,4 +19,8 @@ export class Budget {
   public get itemsAmount() {
     return this.items.length;
   }
+
+  public getItems(): Item[] {
+    return this.items
+  }
 }
