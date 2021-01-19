@@ -4,6 +4,8 @@ import { DiscountAppliance } from './discount-appliance'
 const budget1 = new Budget()
 const budget2 = new Budget()
 const budget3 = new Budget()
+const budget4 = new Budget()
+
 const discountAppliance = new DiscountAppliance()
 
 // Discount by price ($ 500 +)
@@ -42,3 +44,14 @@ console.log('Items: ', budget3.itemsAmount);
 console.log('Total: $', budget3.totalPrice.toFixed(2));
 console.log('Discount: $', discountValue3.toFixed(2))
 console.log('Final value: $', finalValue3.toFixed(2));
+console.log('');
+
+// Discout by tie in sale
+budget4.addItem({ name: "Pen", price: 5 })
+budget4.addItem({ name: "Pencil", price: 3 })
+const discountValue4 = discountAppliance.applyDiscount(budget4)
+const finalValue4 = budget4.totalPrice - discountValue4
+console.log('Items: ', budget4.itemsAmount);
+console.log('Total: $', budget4.totalPrice.toFixed(2));
+console.log('Discount: $', discountValue4.toFixed(2))
+console.log('Final value: $', finalValue4.toFixed(2));
