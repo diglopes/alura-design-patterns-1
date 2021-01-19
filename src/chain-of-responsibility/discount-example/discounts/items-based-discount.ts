@@ -1,22 +1,16 @@
 import { Budget } from "../budget";
-import { Discount } from "./protocols/discount";
+import { BaseDiscount } from "./base-discount";
 
-export class ItemsBasedDiscount implements Discount {
-  next: Discount;
-  readonly discountRate = 0.1;
-  constructor(private itemsRequiredToDiscount: number = 5) {}
-
-  public execute(budget: Budget): number {
-    if (budget.itemsAmount > this.itemsRequiredToDiscount) {
-      return budget.totalPrice * this.discountRate;
-    } else if (this.next) {
-      return this.next.execute(budget);
-    } else {
-      return 0;
-    }
+export class ItemsBasedDiscount extends BaseDiscount {
+  readonly discountRate = 0.05;
+  
+  constructor(private itemsRequiredToDiscount: number = 5) {
+    super()
   }
 
-  public setNext(next: Discount): void {
-    this.next = next;
+  public execute(budget: Budget): number {    
+    const testResult = budget.itemsAmount > this.itemsRequiredToDiscount
+    const callback = () => budget.totalPrice * this.discountRate;
+    return this.runConditionalTest(testResult, budget, callback)
   }
 }
