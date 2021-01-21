@@ -2,6 +2,18 @@
 # yarn lockfile v1
 
 
+"@types/json2csv@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@types/json2csv/-/json2csv-5.0.1.tgz#576d38515dfedeabf46eb85e790894b8df72ab40"
+  integrity sha512-1r5GCTyFtdQ53CRSIctzWZCmtDXvxtzM77SzOqPB4woMeGcc3rhUMzPqEQH3rokG1k/QLzlC5Qe5Ih8NuFN70Q==
+  dependencies:
+    "@types/node" "*"
+
+"@types/node@*":
+  version "14.14.22"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.22.tgz#0d29f382472c4ccf3bd96ff0ce47daf5b7b84b18"
+  integrity sha512-g+f/qj/cNcqKkc3tFqlXOYjrmZA+jNBiDzbP3kH+B+otKFqAdPgVTGP1IeKRdMml/aE69as5S4FqtxAbl+LaMw==
+
 "@types/node@^14.14.21":
   version "14.14.21"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.21.tgz#d934aacc22424fe9622ebf6857370c052eae464e"
@@ -16,6 +28,13 @@
   version "0.0.30"
   resolved "https://registry.yarnpkg.com/@types/strip-json-comments/-/strip-json-comments-0.0.30.tgz#9aa30c04db212a9a0649d6ae6fd50accc40748a1"
   integrity sha512-7NQmHra/JILCd1QqpSzl8+mJRc8ZHz3uDm8YV1Ks9IhK0epEiTw8aIErbvH9PI+6XbqhyIQy3462nEsn7UVzjQ==
+
+"@types/x2js@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@types/x2js/-/x2js-3.1.0.tgz#d809ef1ace1a8b55b3e8cb6a1a0b282af66475be"
+  integrity sha1-2AnvGs4ai1Wz6MtqGgsoKvZkdb4=
+  dependencies:
+    x2js "*"
 
 anymatch@~3.1.1:
   version "3.1.1"
@@ -92,6 +111,11 @@ chokidar@^3.4.0:
     readdirp "~3.5.0"
   optionalDependencies:
     fsevents "~2.3.1"
+
+commander@^6.1.0:
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-6.2.1.tgz#0792eb682dfbc325999bb2b84fddddba110ac73c"
+  integrity sha512-U7VdrJFnJgo4xjrHpTzu0yrHPGImdsmD95ZlgYSEajAn2JKzDhDTPG9kBTefmObL2w/ngeZnilk+OV9CG3d7UA==
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -279,6 +303,20 @@ is-utf8@^0.2.0:
   resolved "https://registry.yarnpkg.com/is-utf8/-/is-utf8-0.2.1.tgz#4b0da1442104d1b336340e80797e865cf39f7d72"
   integrity sha1-Sw2hRCEE0bM2NA6AeX6GXPOffXI=
 
+json2csv@^5.0.5:
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/json2csv/-/json2csv-5.0.5.tgz#b65bf4f1e1eeb81cb7097d383edec249f8bce3af"
+  integrity sha512-/UyvnfuUghRM+C/AiQ02X0LS+/AKfugcwaWo/gAz1pi203v29sUMrMSNEC088i+h0EG39eSsmeL9Z0iK+9MM0A==
+  dependencies:
+    commander "^6.1.0"
+    jsonparse "^1.3.1"
+    lodash.get "^4.4.2"
+
+jsonparse@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/jsonparse/-/jsonparse-1.3.1.tgz#3f4dae4a91fac315f71062f8521cc239f1366280"
+  integrity sha1-P02uSpH6wxX3EGL4UhzCOfE2YoA=
+
 load-json-file@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"
@@ -289,6 +327,11 @@ load-json-file@^1.0.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
     strip-bom "^2.0.0"
+
+lodash.get@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
+  integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
 
 loud-rejection@^1.0.0:
   version "1.6.0"
@@ -623,6 +666,18 @@ wrappy@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
+
+x2js@*, x2js@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/x2js/-/x2js-3.4.0.tgz#1414ad99062705086a4838e8dde4ecd06e8bd3a9"
+  integrity sha512-1tozn7D51ghz2DAiy5U6R55qn9x2F3lHUxusOD0QtYlLSDGxyXjHfn0c508eXG1D7s8qqj54SiU5HsPEfhDIpg==
+  dependencies:
+    xmldom "^0.1.19"
+
+xmldom@^0.1.19:
+  version "0.1.31"
+  resolved "https://registry.yarnpkg.com/xmldom/-/xmldom-0.1.31.tgz#b76c9a1bd9f0a9737e5a72dc37231cf38375e2ff"
+  integrity sha512-yS2uJflVQs6n+CyjHoaBmVSqIDevTAWrzMmjG1Gc7h1qQ7uVozNhEPJAwZXWyGQ/Gafo3fCwrcaokezLPupVyQ==
 
 xtend@^4.0.0:
   version "4.0.2"
