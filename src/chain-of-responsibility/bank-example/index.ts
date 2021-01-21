@@ -16,7 +16,7 @@ const requestCSV = new Request(FORMAT.csv)
 const responseCSV = responseContainer.send(requestCSV, account)
 console.log("CSV: ", responseCSV);
 
-
-
-
-
+// Percentage
+const requestPercentage = new Request(FORMAT.percentage)
+const responsePercentage = responseContainer.send(requestPercentage, account)
+console.log("Percentage: ", responsePercentage);
