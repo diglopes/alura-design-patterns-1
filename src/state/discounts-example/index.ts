@@ -1,8 +1,8 @@
 import { Budget } from "./budget";
 
 const budget = new Budget(1000)
-console.log(budget.applyExtraDiscount());
 budget.approve()
-console.log(budget.applyExtraDiscount());
+budget.applyExtraDiscount()
+budget.applyExtraDiscount()
+console.log(budget.getValue());
 budget.finish()
-console.log(budget.applyExtraDiscount());

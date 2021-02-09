@@ -15,7 +15,7 @@ export class FinishedState implements BudgetState {
         throw new Error("Already on finished state");
       }
 
-    public applyExtraDiscount(budget: Budget): number {
+    public applyExtraDiscount(budget: Budget): void {
         throw new Error('Finished budgets receive no discounts!')
     }
 }

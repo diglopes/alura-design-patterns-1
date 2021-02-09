@@ -16,7 +16,7 @@ export class OnApprovalState implements BudgetState {
     throw new Error("Can't jump direct to finish")
   }
 
-  public applyExtraDiscount(budget: Budget): number {
-    return budget.getValue() - budget.getValue() * 0.05;
+  public applyExtraDiscount(budget: Budget): void {
+    budget.setValue(budget.getValue() - budget.getValue() * 0.05);
   }
 }

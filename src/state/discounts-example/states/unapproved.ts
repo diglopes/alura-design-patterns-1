@@ -15,7 +15,7 @@ export class UnapprovedState implements BudgetState {
     budget.changeState(new FinishedState());
   }
 
-  public applyExtraDiscount(budget: Budget): number {
+  public applyExtraDiscount(budget: Budget): void {
     throw new Error("Unapproved budgets receive no discounts!");
   }
 }

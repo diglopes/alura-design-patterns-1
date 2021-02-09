@@ -15,7 +15,7 @@ export class ApprovedState implements BudgetState {
    budget.changeState(new FinishedState())
   }
 
-  public applyExtraDiscount(budget: Budget): number {
-    return budget.getValue() - budget.getValue() * 0.02;
+  public applyExtraDiscount(budget: Budget): void {
+    budget.setValue(budget.getValue() - budget.getValue() * 0.02);
   }
 }
