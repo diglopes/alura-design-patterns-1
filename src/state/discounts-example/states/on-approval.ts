@@ -4,15 +4,15 @@ import { BudgetState } from "./budget-state";
 import { UnapprovedState } from "./unapproved";
 
 export class OnApprovalState implements BudgetState {
-  public approve (): BudgetState {
-    return new ApprovedState()
+  public approve (budget: Budget): void {
+    budget.changeState(new ApprovedState())
   }
 
-  public unapprove (): BudgetState {
-    return new UnapprovedState()
+  public unapprove (budget: Budget): void {
+    budget.changeState(new UnapprovedState())
   } 
 
-  finish (): BudgetState {
+  finish (budget: Budget): void {
     throw new Error("Can't jump direct to finish")
   }
 

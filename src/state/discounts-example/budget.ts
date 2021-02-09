@@ -9,19 +9,23 @@ export class Budget {
     return this.value;
   }
 
+  public changeState(state: BudgetState): void {
+    this.state = state
+  }
+
   public applyExtraDiscount() {
     return this.state.applyExtraDiscount(this);
   }
 
   public approve(): void {
-    this.state = this.state.approve();
+    this.state.approve(this);
   }
 
   public unapprove(): void {
-    this.state = this.state.unapprove();
+    this.state.unapprove(this);
   }
 
   public finish(): void {
-    this.state = this.state.finish();
+    this.state.finish(this);
   }
 }

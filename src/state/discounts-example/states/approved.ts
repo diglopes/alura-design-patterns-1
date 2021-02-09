@@ -3,16 +3,16 @@ import { BudgetState } from "./budget-state";
 import { FinishedState } from "./finished";
 
 export class ApprovedState implements BudgetState {
-  public approve(): BudgetState {
+  public approve(budget: Budget): void {
     throw new Error("Already on approved state");
   }
 
-  public unapprove(): BudgetState {
+  public unapprove(budget: Budget): void {
     throw new Error("Approved budgets cant get unapproved");
   }
 
-  finish(): BudgetState {
-    return new FinishedState();
+  finish(budget: Budget): void {
+   budget.changeState(new FinishedState())
   }
 
   public applyExtraDiscount(budget: Budget): number {
