@@ -10,6 +10,7 @@ const invoice = invoiceBuilder
   .withItem(new Item("Item 2", 500))
   .withItem(new Item("Item 3", 200))
   .withObs("Any observation")
+  .withEmissionDate(new Date("03/11/2012"))
   .build()
 
 console.log(invoice.getTaxes());

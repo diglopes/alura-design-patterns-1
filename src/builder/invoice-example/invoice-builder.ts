@@ -4,12 +4,12 @@ import { Item } from "./item";
 export class InvoiceBuilder {
   private companyName: string;
   private cnpj: string;
-  private emissionDate: Date;
+  private emissionDate: Date = this.currentDate();
   private grossAmount: number = 0;
   private taxes: number = 0;
   private items: Item[] = [];
   private obs: string;
-
+  
   public withCompanyName(companyName: string): InvoiceBuilder {
     this.companyName = companyName;
     return this;
@@ -42,7 +42,6 @@ export class InvoiceBuilder {
   }
 
   public build(): Invoice {
-    this.emissionDate = this.currentDate();
     return new Invoice(
       this.companyName,
       this.cnpj,
